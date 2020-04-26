@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
-import Layout from "../components/MainLayout";
+import withLayout from "../components/MainLayout";
 
 const Room = () => {
     const router = useRouter();
 
     return (
-        <Layout>
+        <React.Fragment>
             <h1>{router.query.id}</h1>
             <p>This is the blog post content.</p>
-        </Layout>
+        </React.Fragment>
     );
 };
 export default withLayout(Room);
