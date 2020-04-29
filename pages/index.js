@@ -9,16 +9,16 @@ const landingContainer = {
     paddingTop: "20vh",
     marginLeft: "auto",
     marginRight: "auto",
-    textAlign: "center"
+    textAlign: "center",
 };
 const linkStyle = {
-    marginRight: "15px"
+    marginRight: "15px",
 };
 const containerBackground = {
     margin: 0,
     paddingTop: 10,
     background: "#545454",
-    opacity: 0.8
+    opacity: 0.8,
 };
 const background = {
     margin: 0,
@@ -29,10 +29,10 @@ const background = {
     backgroundPosition: "center",
     backgroundRepeat: "no - repeat",
     backgroundSize: "cover",
-    opacity: 0.9
+    opacity: 0.9,
 };
 
-const Landing = props => {
+const Landing = (props) => {
     return (
         <React.Fragment>
             <div style={background}>

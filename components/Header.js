@@ -1,9 +1,9 @@
 import Link from "next/link";
-import styles from "./Header.module.css";
+import styles from "./../styling/Header.module.css";
 import { useState } from "react";
 
 const linkStyle = {
-    marginLeft: 15
+    marginLeft: 15,
 };
 
 const header = {
@@ -11,10 +11,10 @@ const header = {
     left: 0,
     height: 50,
     width: "100%",
-    background: "#BDC3C7"
+    background: "#BDC3C7",
 };
 
-const MenuIcon = clickedObj => {
+const MenuIcon = (clickedObj) => {
     let src;
     if (clickedObj.clicked) {
         src = "/images/x_close.png";
@@ -24,7 +24,7 @@ const MenuIcon = clickedObj => {
     return <img className={styles.menuIcon} src={src} alt="my image" />;
 };
 
-const NavMenu = open => {
+const NavMenu = (open) => {
     let classNames;
     if (open.clicked) {
         classNames = (styles.navMenu, styles.active);

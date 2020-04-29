@@ -6,7 +6,7 @@ const Room = () => {
 
     return (
         <React.Fragment>
-            <h1>{router.query.id}</h1>
+            {/* <h1>{router.query.id}</h1> */}
             <p>This is the blog post content.</p>
         </React.Fragment>
     );
