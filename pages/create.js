@@ -1,10 +1,10 @@
 import Router, { useRouter } from "next/router";
-import withLayout from "../components/MainLayout";
 import { useState } from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { useQuery } from "@apollo/react-hooks";
 import { useMutation } from "@apollo/react-hooks";
+import WithLayout from "../components/MainLayout";
 
 import styles from "./../styling/Main.module.css";
 
@@ -24,7 +24,7 @@ const CREATE_ROOM = gql`
 
 const createRoom = () => {
     const router = useRouter();
-    const [createRoom, { data }] = useMutation(CREATE_ROOM);
+    // const [createRoom, { data }] = useMutation(CREATE_ROOM);
 
     return (
         <React.Fragment>
@@ -39,8 +39,8 @@ const createRoom = () => {
                     createRoom();
                 }}
             ></button>
-            {console.log(data)}
-            {data ? Router.push("/room") : null}
+            {/* {console.log(data)} */}
+            {Router.push("/room")}
             {/* <Query query={HERO_QUERY}>
                 {({ loading, error, data }) => {
                     if (loading) return <div className={styles.loader} />;
@@ -52,4 +52,4 @@ const createRoom = () => {
         </React.Fragment>
     );
 };
-export default withLayout(createRoom);
+export default WithLayout(createRoom);

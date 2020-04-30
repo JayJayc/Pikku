@@ -1,5 +1,9 @@
-import Layout from "../components/MainLayout";
+import WithLayout from "../components/MainLayout";
 
-const Page = () => <Layout content={<p>This is the about page</p>} />;
+const Page = () => (
+    <div>
+        <p>This is the about page</p>
+    </div>
+);
 
-export default Page;
+export default WithLayout(Page);

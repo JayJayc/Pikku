@@ -1,27 +1,23 @@
 import Header from "./Header";
-import { ApolloProvider } from "@apollo/react-hooks";
-import { client } from "../lib/apollo";
-import styles from "./../styling/Main.module.css";
 
-const layoutStyle = {};
+import styles from "./../styling/Main.module.css";
 
 // background-color: #e5dad6;
 
-const withLayout = (Page) => {
+const WithLayout = (Page) => {
+    console.log(typeof Page);
     return () => (
-        <div style={layoutStyle}>
+        <div>
             <style jsx global>{`
                 body {
                     margin: 0;
                     font-family: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif";
                 }
             `}</style>
-            <ApolloProvider client={client}>
-                <Header />
-                <Page />
-            </ApolloProvider>
+            <Header />
+            <Page />
         </div>
     );
 };
 
-export default withLayout;
+export default WithLayout;

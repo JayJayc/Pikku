@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import withLayout from "../components/MainLayout";
+import WithLayout from "../components/MainLayout";
 
 const Room = () => {
     const router = useRouter();
@@ -11,4 +11,4 @@ const Room = () => {
         </React.Fragment>
     );
 };
-export default withLayout(Room);
+export default WithLayout(Room);

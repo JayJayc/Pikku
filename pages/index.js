@@ -1,4 +1,4 @@
-import withLayout from "../components/MainLayout";
+import WithLayout from "../components/MainLayout";
 import Link from "next/link";
 
 const landingContainer = {
@@ -56,4 +56,4 @@ const Landing = (props) => {
         </React.Fragment>
     );
 };
-export default withLayout(Landing);
+export default WithLayout(Landing);
