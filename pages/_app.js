@@ -1,12 +1,14 @@
 // import App from 'next/app'
 import { ApolloProvider } from "@apollo/react-hooks";
 import { client } from "../lib/apollo";
-
+import { UserProvider } from "../components/UserContext";
 const App = ({ Component, pageProps }) => {
     return (
-        // <ApolloProvider client={client}>
-        <Component {...pageProps} />
-        /* </ApolloProvider> */
+        <UserProvider>
+            <ApolloProvider client={client}>
+                <Component {...pageProps} />
+            </ApolloProvider>
+        </UserProvider>
     );
 };
 

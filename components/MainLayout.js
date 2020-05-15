@@ -5,12 +5,12 @@ import styles from "./../styling/Main.module.css";
 // background-color: #e5dad6;
 
 const WithLayout = (Page) => {
-    console.log(typeof Page);
     return () => (
         <div>
             <style jsx global>{`
                 body {
                     margin: 0;
+                    background: #f1f1f1f1;
                     font-family: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif";
                 }
             `}</style>

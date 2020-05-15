@@ -1,55 +1,46 @@
 import Router, { useRouter } from "next/router";
 import { useState } from "react";
-import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { useQuery } from "@apollo/react-hooks";
+import gql from "graphql-tag";
 import { useMutation } from "@apollo/react-hooks";
 import WithLayout from "../components/MainLayout";
-
+import { useContext } from "react";
+import { UserContext } from "../components/UserContext";
 import styles from "./../styling/Main.module.css";
 
-const HERO_QUERY = gql`
-    {
-        rooms {
+const CREATE_ROOM = gql`
+    mutation CreateRoom($owner: String!) {
+        createRoom(owner: $owner) {
             roomIdShort
         }
     }
 `;
 
-const CREATE_ROOM = gql`
-    mutation LoginUser {
-        createRoom(owner: "bob smith")
-    }
-`;
-
-const createRoom = () => {
+const createRoomPage = () => {
+    const [state, setState] = useContext(UserContext);
     const router = useRouter();
-    // const [createRoom, { data }] = useMutation(CREATE_ROOM);
+    const [createRoom, { loading, error }] = useMutation(CREATE_ROOM, {
+        onCompleted({ createRoom }) {
+            router.push("/room/" + createRoom.roomIdShort);
+        },
+    });
 
     return (
         <React.Fragment>
             <h1>Create</h1>
             <p>This is the blog post content.</p>
-            <label for="range">Range</label>
+            <label htmlFor="range">Range</label>
             <input type="range" id="vol" name="range" min="0" max="10"></input>
-            <label for="area">Area</label>
+            <label htmlFor="area">Area</label>
             <input type="text" id="area" name="area" />
             <button
                 onClick={(e) => {
-                    createRoom();
+                    e.preventDefault();
+                    createRoom({ variables: { owner: state.email } });
                 }}
             ></button>
-            {/* {console.log(data)} */}
-            {Router.push("/room")}
-            {/* <Query query={HERO_QUERY}>
-                {({ loading, error, data }) => {
-                    if (loading) return <div className={styles.loader} />;
-                    if (error) return `Error! ${error}`;
-                    // return <div className={styles.loader} />;
-                    return <p>{console.log(data)}</p>;
-                }}
-            </Query> */}
         </React.Fragment>
     );
 };
-export default WithLayout(createRoom);
+export default WithLayout(createRoomPage);

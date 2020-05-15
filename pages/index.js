@@ -1,5 +1,7 @@
 import WithLayout from "../components/MainLayout";
 import Link from "next/link";
+import { useContext } from "react";
+import { UserContext } from "../components/UserContext";
 
 const landingContainer = {
     width: "60%",
@@ -33,18 +35,21 @@ const background = {
 };
 
 const Landing = (props) => {
+    const [state, setState] = useContext(UserContext);
+
     return (
         <React.Fragment>
             <div style={background}>
                 <div style={landingContainer}>
                     <div style={containerBackground}>
-                        <h1>Welcome to Pikku</h1>
+                        <h1>Welcome to Pikku1</h1>
                         <h3>Sed commodo elementum elit ac iaculis.</h3>
                         <button>
                             <Link href="/create">
                                 <a style={linkStyle}>Create Room</a>
                             </Link>
                         </button>
+
                         <button>
                             <Link href="/join">
                                 <a style={linkStyle}>Join Room</a>

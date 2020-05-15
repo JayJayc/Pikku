@@ -1,6 +1,23 @@
 import Link from "next/link";
 import styles from "./../styling/Header.module.css";
 import { useState } from "react";
+import Modal from "./LoginModal";
+// import NoSsr from "./Login";
+var firebase = require("firebase");
+
+// Configure Firebase.
+var config = {
+    apiKey: "AIzaSyBYrfQbj4bKnbUGsnYG0xQO8-m_sIjRIWc",
+    authDomain: "pikku-275413.firebaseapp.com",
+};
+
+if (!firebase.apps.length) {
+    try {
+        firebase.initializeApp(config);
+    } catch (err) {
+        console.error("Firebase initialization error raised", err.stack);
+    }
+}
 
 const linkStyle = {
     marginLeft: 15,
@@ -42,18 +59,70 @@ const NavMenu = (open) => {
         </div>
     );
 };
+
+const handleLogin = (loggedIn, setLoggedIn, setShowModal) => {
+    console.log(loggedIn);
+    if (!loggedIn) {
+        setShowModal(true);
+    } else {
+        firebase
+            .auth()
+            .signOut()
+            .then(function () {
+                // Sign-out successful.
+                setLoggedIn(false);
+            })
+            .catch(function (error) {
+                console.log(error);
+                // An error happened
+            });
+    }
+};
+
 const Header = () => {
     const [menuClicked, setMenuClicked] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [loginText, setLoginText] = useState("Login");
+    firebase.auth().onAuthStateChanged(function (user) {
+        var user = firebase.auth().currentUser;
+        var name;
+
+        if (user != null) {
+            name = user.displayName;
+        }
+        if (user) {
+            setLoggedIn(true);
+            setLoginText("Hi, " + user.email);
+        } else {
+            setLoggedIn(false);
+            setLoginText("Login");
+        }
+    });
     return (
         <React.Fragment>
             <div style={header}>
-                <div
-                    className={styles.menuButton}
-                    onClick={() => setMenuClicked(!menuClicked)}
-                >
-                    <MenuIcon clicked={menuClicked} />
+                <div className={styles.rightHeaderContainer}>
+                    <div
+                        onClick={(e) => {
+                            handleLogin(loggedIn, setLoggedIn, setShowModal);
+                        }}
+                        id="firebaseui-auth-container"
+                        className={styles.loginMessage}
+                    >
+                        {loginText}
+                    </div>
+                    <div
+                        className={styles.menuButton}
+                        onClick={() => setMenuClicked(!menuClicked)}
+                    >
+                        <MenuIcon clicked={menuClicked} />
+                    </div>
                 </div>
             </div>
+            {showModal ? (
+                <Modal setShowModal={setShowModal} firebase={firebase} />
+            ) : null}
             <NavMenu clicked={menuClicked} />
         </React.Fragment>
     );
