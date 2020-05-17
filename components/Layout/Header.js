@@ -1,8 +1,8 @@
 import Link from "next/link";
-import styles from "./../styling/Header.module.css";
+import styles from "./../../styling/Header.module.css";
 import Modal from "./LoginModal";
 import { useState, useContext } from "react";
-import { UserContext } from "../components/UserContext";
+import { UserContext } from "../UserContext";
 
 // // import NoSsr from "./Login";
 // var firebase = require("firebase");

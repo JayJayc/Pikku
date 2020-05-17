@@ -1,7 +1,5 @@
 import Header from "./Header";
 
-import styles from "./../styling/Main.module.css";
-
 // background-color: #e5dad6;
 
 const WithLayout = (Page) => {

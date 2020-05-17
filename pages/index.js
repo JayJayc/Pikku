@@ -1,4 +1,4 @@
-import WithLayout from "../components/MainLayout";
+import WithLayout from "../components/Layout/MainLayout";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useContext } from "react";

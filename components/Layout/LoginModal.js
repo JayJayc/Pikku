@@ -1,4 +1,4 @@
-import styles from "./../styling/LoginModal.module.css";
+import styles from "./../../styling/LoginModal.module.css";
 import { useState } from "react";
 
 const LoginModal = (props) => {
