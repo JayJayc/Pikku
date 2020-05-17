@@ -1,23 +1,25 @@
 import Link from "next/link";
 import styles from "./../styling/Header.module.css";
-import { useState } from "react";
 import Modal from "./LoginModal";
-// import NoSsr from "./Login";
-var firebase = require("firebase");
+import { useState, useContext } from "react";
+import { UserContext } from "../components/UserContext";
 
-// Configure Firebase.
-var config = {
-    apiKey: "AIzaSyBYrfQbj4bKnbUGsnYG0xQO8-m_sIjRIWc",
-    authDomain: "pikku-275413.firebaseapp.com",
-};
+// // import NoSsr from "./Login";
+// var firebase = require("firebase");
 
-if (!firebase.apps.length) {
-    try {
-        firebase.initializeApp(config);
-    } catch (err) {
-        console.error("Firebase initialization error raised", err.stack);
-    }
-}
+// // Configure Firebase.
+// var config = {
+//     apiKey: "AIzaSyBYrfQbj4bKnbUGsnYG0xQO8-m_sIjRIWc",
+//     authDomain: "pikku-275413.firebaseapp.com",
+// };
+
+// if (!firebase.apps.length) {
+//     try {
+//         firebase.initializeApp(config);
+//     } catch (err) {
+//         console.error("Firebase initialization error raised", err.stack);
+//     }
+// }
 
 const linkStyle = {
     marginLeft: 15,
@@ -84,16 +86,24 @@ const Header = () => {
     const [loggedIn, setLoggedIn] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [loginText, setLoginText] = useState("Login");
+    const [state, setState] = useContext(UserContext);
+
+    const firebase = state.firebase;
     firebase.auth().onAuthStateChanged(function (user) {
         var user = firebase.auth().currentUser;
         var name;
 
         if (user != null) {
-            name = user.displayName;
+            try {
+                name = user.displayName;
+            } catch (err) {
+                // User exists but has no name
+                console.log(err);
+            }
         }
         if (user) {
             setLoggedIn(true);
-            setLoginText("Hi, " + user.email);
+            setLoginText("Hi, " + name);
         } else {
             setLoggedIn(false);
             setLoginText("Login");

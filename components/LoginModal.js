@@ -1,10 +1,7 @@
 import styles from "./../styling/LoginModal.module.css";
-import { useState, useContext } from "react";
-import { UserContext } from "../components/UserContext";
+import { useState } from "react";
 
 const LoginModal = (props) => {
-    const [state, setState] = useContext(UserContext);
-
     const [email, setEmail] = useState(false);
     const [password, setPassword] = useState(false);
     const handleClose = () => {
@@ -22,7 +19,6 @@ const LoginModal = (props) => {
             .auth()
             .signInWithEmailAndPassword(email, password)
             .then((user) => {
-                setState((state) => ({ ...state, email: email }));
                 props.setShowModal(false);
             })
             .catch(function (error) {

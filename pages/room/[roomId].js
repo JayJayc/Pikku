@@ -2,33 +2,7 @@ import { useRouter } from "next/router";
 import WithLayout from "../../components/MainLayout";
 import gql from "graphql-tag";
 import { useSubscription } from "@apollo/react-hooks";
-
-const roomIdContainer = {
-    position: "absolute",
-    width: "10%",
-    minWidth: "175px",
-    maxWidth: "250px",
-    /* margin: 0 auto; */
-    marginTop: "90px",
-    marginRight: "70px",
-    textAlign: "center",
-    right: 0,
-    top: 0,
-    paddingLeft: 25,
-    paddingRight: 25,
-    border: "5px solid black",
-};
-
-const mainContainer = {
-    width: "60%",
-    minWidth: "350px",
-    maxWidth: "600px",
-    /* margin: 0 auto; */
-    marginTop: "25vh",
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
-};
+import styles from "./../../styling/Room.module.css";
 
 const Room = () => {
     const router = useRouter();
@@ -48,7 +22,11 @@ const Room = () => {
     // if (error) return <React.Fragment>{console.log(error)}</React.Fragment>;
     return (
         <React.Fragment>
-            Room: {roomId}
+            <div className={styles.roomIdContainer}>
+                <div className={styles.roomId}>Room: {roomId}</div>
+                <div className={styles.shareId}>Click to share</div>
+            </div>
+            <div className={styles.mainContainer}>hi</div>
             {error ? console.log(error) : null}
             {console.log(data)}
         </React.Fragment>

@@ -47,9 +47,22 @@ const createRoom = () => {
     const [state, setState] = useContext(UserContext);
     const [name, setName] = useState("");
     const [roomId, setRoomId] = useState("");
-    const handleJoin = () => {
-        console.log("join");
-    };
+    const firebase = state.firebase;
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        var user = firebase.auth().currentUser;
+        var name;
+
+        if (user != null) {
+            name = user.displayName;
+        }
+        console.log(name);
+        // if (user) {
+        //     setLoginText("Hi, " + user.email);
+        // } else {
+        //     setLoginText("Login");
+        // }
+    });
     const [joinRoom, { loading, error }] = useMutation(JOIN_ROOM, {
         onCompleted({ joinRoom }) {
             console.log(joinRoom);

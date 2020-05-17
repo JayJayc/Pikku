@@ -1,0 +1,33 @@
+.landingContainer {
+    width: 60%;
+    min-width: 350px;
+    max-width: 600px;
+    /* margin: 0 auto; */
+    padding-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.linkStyle {
+    margin-right: 15px;
+}
+
+.containerBackground {
+    margin: 0;
+    padding-top: 10px;
+    background: #545454;
+    opacity: 0.8;
+}
+
+.background {
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    height: 850px;
+    background-image: 'url("/images/food_background1.jpg")';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
