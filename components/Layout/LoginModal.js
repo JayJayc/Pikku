@@ -30,7 +30,7 @@ const LoginModal = (props) => {
             <div id="myModal" className={styles.modal}>
                 <div className={styles.modalContent}>
                     <div className={styles.modalHeader}>
-                        <span className="close" onClick={handleClose}>
+                        <span className={styles.close} onClick={handleClose}>
                             &times;
                         </span>
                         <h2>Modal Header</h2>
