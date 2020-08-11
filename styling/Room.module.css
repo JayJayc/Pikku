@@ -1,0 +1,38 @@
+.roomIdContainer {
+    position: absolute;
+    border: 5px solid black;
+    width: fit-content;
+    min-width: 175px;
+    padding: 10px;
+    background-color: orange;
+    color: red;
+    text-align: center;
+
+    margin-top: 90px;
+    margin-left: 70px;
+    left: 0;
+    top: 0;
+}
+
+.roomId {
+    font-size: 200%;
+}
+.shareID {
+    font-size: 75%;
+}
+
+.mainContainer {
+    width: 60%;
+    min-width: 350px;
+    max-width: 600px;
+    /* margin: 0 auto; */
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.playersContainer {
+    margin-bottom: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
