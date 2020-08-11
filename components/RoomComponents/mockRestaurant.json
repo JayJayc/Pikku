@@ -1,0 +1,258 @@
+{
+    "address_components": [
+        {
+            "long_name": "Shop 1140",
+            "short_name": "Shop 1140",
+            "types": ["subpremise"]
+        },
+        {
+            "long_name": "Highpoint Shopping Centre",
+            "short_name": "Highpoint Shopping Centre",
+            "types": ["premise"]
+        },
+        {
+            "long_name": "120-200",
+            "short_name": "120-200",
+            "types": ["street_number"]
+        },
+        {
+            "long_name": "Rosamond Road",
+            "short_name": "Rosamond Rd",
+            "types": ["route"]
+        },
+        {
+            "long_name": "Maribyrnong",
+            "short_name": "Maribyrnong",
+            "types": ["locality", "political"]
+        },
+        {
+            "long_name": "City of Maribyrnong",
+            "short_name": "Maribyrnong",
+            "types": ["administrative_area_level_2", "political"]
+        },
+        {
+            "long_name": "Victoria",
+            "short_name": "VIC",
+            "types": ["administrative_area_level_1", "political"]
+        },
+        {
+            "long_name": "Australia",
+            "short_name": "AU",
+            "types": ["country", "political"]
+        },
+        {
+            "long_name": "3032",
+            "short_name": "3032",
+            "types": ["postal_code"]
+        }
+    ],
+    "adr_address": "Highpoint Shopping Centre, Shop 1140/<span class=\"street-address\">120-200 Rosamond Rd</span>, <span class=\"locality\">Maribyrnong</span> <span class=\"region\">VIC</span> <span class=\"postal-code\">3032</span>, <span class=\"country-name\">Australia</span>",
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Highpoint Shopping Centre, Shop 1140/120-200 Rosamond Rd, Maribyrnong VIC 3032, Australia",
+    "formatted_phone_number": "(03) 9317 5530",
+    "html_attributions": [],
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+    "id": "71fe23f63526ba60bce448e12176b5e847fe9a47",
+    "international_phone_number": "+61 3 9317 5530",
+    "name": "Gami Chicken & Beer",
+    "opening_hours": {
+        "open_now": false,
+        "periods": [
+            {
+                "close": {
+                    "day": 0,
+                    "hours": 21,
+                    "minutes": 0,
+                    "nextDate": 1590318000000,
+                    "time": "2100"
+                },
+                "open": {
+                    "day": 0,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1590282000000,
+                    "time": "1100"
+                }
+            },
+            {
+                "close": {
+                    "day": 1,
+                    "hours": 21,
+                    "minutes": 0,
+                    "nextDate": 1590404400000,
+                    "time": "2100"
+                },
+                "open": {
+                    "day": 1,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1590368400000,
+                    "time": "1100"
+                }
+            },
+            {
+                "close": {
+                    "day": 2,
+                    "hours": 21,
+                    "minutes": 0,
+                    "nextDate": 1590490800000,
+                    "time": "2100"
+                },
+                "open": {
+                    "day": 2,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1590454800000,
+                    "time": "1100"
+                }
+            },
+            {
+                "close": {
+                    "day": 3,
+                    "hours": 21,
+                    "minutes": 0,
+                    "nextDate": 1589972400000,
+                    "time": "2100"
+                },
+                "open": {
+                    "day": 3,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1589936400000,
+                    "time": "1100"
+                }
+            },
+            {
+                "close": {
+                    "day": 4,
+                    "hours": 22,
+                    "minutes": 0,
+                    "nextDate": 1590062400000,
+                    "time": "2200"
+                },
+                "open": {
+                    "day": 4,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1590022800000,
+                    "time": "1100"
+                }
+            },
+            {
+                "close": {
+                    "day": 5,
+                    "hours": 22,
+                    "minutes": 0,
+                    "nextDate": 1590148800000,
+                    "time": "2200"
+                },
+                "open": {
+                    "day": 5,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1590109200000,
+                    "time": "1100"
+                }
+            },
+            {
+                "close": {
+                    "day": 6,
+                    "hours": 22,
+                    "minutes": 0,
+                    "nextDate": 1590235200000,
+                    "time": "2200"
+                },
+                "open": {
+                    "day": 6,
+                    "hours": 11,
+                    "minutes": 0,
+                    "nextDate": 1590195600000,
+                    "time": "1100"
+                }
+            }
+        ],
+        "weekday_text": [
+            "Monday: 11:00 AM – 9:00 PM",
+            "Tuesday: 11:00 AM – 9:00 PM",
+            "Wednesday: 11:00 AM – 9:00 PM",
+            "Thursday: 11:00 AM – 10:00 PM",
+            "Friday: 11:00 AM – 10:00 PM",
+            "Saturday: 11:00 AM – 10:00 PM",
+            "Sunday: 11:00 AM – 9:00 PM"
+        ]
+    },
+    "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipMJjtLIn5uYm1IaiXp7kcVAIELp0e9Mpr_BGCjX=s1600-h300",
+        "https://lh3.googleusercontent.com/p/AF1QipOAGz_4yqBS3f5Zf6a5QFY5rBz5zGDkzFRnnNeD=s1600-h300",
+        "https://lh3.googleusercontent.com/p/AF1QipPORtURV1Wehne_cE314DpkM8bMQSFy8iBxlT6H=s1600-h300",
+        "https://lh3.googleusercontent.com/p/AF1QipM0SHqQeR6wdono1rIbBeYvHFCrIOggyCM8kxk1=s1600-h300"
+    ],
+    "place_id": "ChIJB3JUIqpd1moRXPL1KN5x_24",
+    "plus_code": {
+        "compound_code": "6VGQ+PP Maribyrnong, Victoria, Australia",
+        "global_code": "4RJ66VGQ+PP"
+    },
+    "price_level": 2,
+    "rating": 3.4,
+    "reference": "ChIJB3JUIqpd1moRXPL1KN5x_24",
+    "reviews": [
+        {
+            "author_name": "sara senanayake",
+            "author_url": "https://www.google.com/maps/contrib/117615198549066969862/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh6.ggpht.com/-z5zzy3xa8iU/AAAAAAAAAAI/AAAAAAAAAAA/whu6gexUSnE/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+            "rating": 2,
+            "relative_time_description": "9 months ago",
+            "text": "Nice place to have crispy chicken 🍗. However, not the best place. Both food and service was pretty average.",
+            "time": 1564285672
+        },
+        {
+            "author_name": "Steve Kwon",
+            "author_url": "https://www.google.com/maps/contrib/108499375719236029229/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh4.ggpht.com/-UYrhbsGSYNE/AAAAAAAAAAI/AAAAAAAAAAA/Yb_AxX6nHpg/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+            "rating": 4,
+            "relative_time_description": "in the last week",
+            "text": "Besides being very unorganized for keeping track of take-away orders (order taking too long by them keep working on orders after mine), the food is nice. The food is tasty and has nice presentation. I would come here again time to time.",
+            "time": 1589367874
+        },
+        {
+            "author_name": "John Customer",
+            "author_url": "https://www.google.com/maps/contrib/103539657638697240675/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh5.ggpht.com/-RCYHS5-vSbI/AAAAAAAAAAI/AAAAAAAAAAA/h6kXkwUbpkw/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+            "rating": 4,
+            "relative_time_description": "3 months ago",
+            "text": "Food: Well, KFC (Korean Fried Chicken). Hmmm.. Good variety though!Service: Service was exceptionally good from the manager/owner. I'd go back just because of him.Ambience: Really good idea for families. There's a play area at the back.Value: Very reasonable.",
+            "time": 1581573019
+        },
+        {
+            "author_name": "Chadwick Spinazza",
+            "author_url": "https://www.google.com/maps/contrib/115338599631401741464/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh6.ggpht.com/-4sqJb4JvvVI/AAAAAAAAAAI/AAAAAAAAAAA/7RaeJUhFH80/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg",
+            "rating": 4,
+            "relative_time_description": "4 months ago",
+            "text": "The food is definitely very tasty! Unfortunately my chicken was a little dry in some areas, but it added to the crispness and I love crispy chicken! The chips are also some of the best tasting chips I’ve had. The staff are very friendly and willing to discuss the menu with you.",
+            "time": 1577684441
+        },
+        {
+            "author_name": "Mel K",
+            "author_url": "https://www.google.com/maps/contrib/111074323507144221594/reviews",
+            "language": "en",
+            "profile_photo_url": "https://lh6.ggpht.com/-wkKr2-jPbOE/AAAAAAAAAAI/AAAAAAAAAAA/PlILIC7vA-A/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg",
+            "rating": 3,
+            "relative_time_description": "a year ago",
+            "text": "Restaurant looks really good. This restaurant is so full. We are lucky got a seat just next to front door and it was so cold because of the cold wind from the door. The rest of tables are reserved and no one at the tables. We ordered a whole flavoured chicken and one noodles from lunch menu. The table next to to us ordered just before us. And their food come so fast. The next table is already finished their food, and our chicken just reach the table. Services was so slow. The lunch meal noodles come even later than the chicken. The chicken is really good, but the service was not good at all. I don't think I will go back again unless they improve their service.",
+            "time": 1540102232
+        }
+    ],
+    "scope": "GOOGLE",
+    "types": ["restaurant", "food", "point_of_interest", "establishment"],
+    "url": "https://maps.google.com/?cid=7998236662217175644",
+    "user_ratings_total": 130,
+    "utc_offset": 600,
+    "utc_offset_minutes": 600,
+    "vicinity": "Highpoint Shopping Centre, Shop 1140/120-200 Rosamond Road, Maribyrnong",
+    "website": "https://gamichicken.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb-website&utm_content=120-200-rosamond-rd-maribyrnong-vic"
+}

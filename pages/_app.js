@@ -2,6 +2,8 @@
 import { ApolloProvider } from "@apollo/react-hooks";
 import { client } from "../lib/apollo";
 import { UserProvider } from "../components/UserContext";
+import "@brainhubeu/react-carousel/lib/style.css";
+
 const App = ({ Component, pageProps }) => {
     return (
         <UserProvider>
